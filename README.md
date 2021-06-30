@@ -14,9 +14,36 @@ This function can be built using any of the standard Java IDEs
 
 ### Build From Source
 
-* Download and build the `Java SDK for Bolt` by following the instructions given 
-  [here](https://gitlab.com/projectn-oss/projectn-bolt-java)
-  
+#### Build Java SDK for Bolt
+
+* Download and build the `Java SDK for Bolt` using maven or gradle:
+
+#### Maven
+* Maven is the recommended way to build and consume Java SDK for Bolt.
+
+* Download the source and build the local package (jar):
+
+```bash
+git clone https://gitlab.com/projectn-oss/projectn-bolt-java.git
+cd projectn-bolt-java
+mvn clean package
+```
+
+* The local package would be located at `target/bolt-java-sdk.jar`
+
+#### Gradle
+* Download the source and build the local package(jar):
+
+```bash
+git clone https://gitlab.com/projectn-oss/projectn-bolt-java.git
+cd projectn-bolt-java
+./gradlew uberJar
+```
+
+* The local package would be located at `build/libs/bolt-java-sdk-1.0.jar`
+
+#### Using Java SDK for Bolt
+
 * Download the source and copy the `Java SDK for Bolt` package (`bolt-java-sdk.jar`), built in the previous step,
   into the `lib` directory.
   
@@ -51,6 +78,9 @@ If you haven't deployed `Bolt`, follow the instructions given
   ```
 
 ### Getting Help
+
+Please refer [ProjectN Bolt Java Lambda Sample](https://gitlab.com/projectn-oss/projectn-bolt-java-sample) for a sample
+AWS Lambda Application in Java that utilizes Java SDK for Bolt
 
 For additional assistance, please refer to [Project N Docs](https://xyz.projectn.co/) or contact us directly
 [here](mailto:support@projectn.co)

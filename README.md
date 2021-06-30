@@ -8,6 +8,8 @@ This function can be built using any of the standard Java IDEs
 
 ### Requirements
 
+- Java 8.0 or later
+- Apache Maven (3.0 or higher) / Gradle (5.0 or higher)
 - [Java SDK for Bolt](https://gitlab.com/projectn-oss/projectn-bolt-java)
 - Scala 2.13.6 or later
 - sbt (1.5.3 or higher)

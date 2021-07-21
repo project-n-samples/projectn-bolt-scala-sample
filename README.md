@@ -8,66 +8,34 @@ This function can be built using any of the standard Java IDEs
 
 ### Requirements
 
-- Java 8.0 or later
-- Apache Maven (3.0 or higher) / Gradle (5.0 or higher)
 - [Java SDK for Bolt](https://gitlab.com/projectn-oss/projectn-bolt-java)
 - Scala 2.13.6 or later
 - sbt (1.5.3 or higher)
 
-### Build From Source
+### Using Java SDK for Bolt
 
-#### Build Java SDK for Bolt
-
-* Download and build the `Java SDK for Bolt` using maven or gradle:
-
-#### Maven
-* Maven is the recommended way to build and consume Java SDK for Bolt.
-
-* Download the source and build the local package (jar):
+#### Sbt
+* Import the SDK into your project by adding the following to your build definition (`build.sbt`):
 
 ```bash
-git clone https://gitlab.com/projectn-oss/projectn-bolt-java.git
-cd projectn-bolt-java
-mvn clean package
-```
-
-* The local package would be located at `target/bolt-java-sdk.jar`
-
-#### Gradle
-* Download the source and build the local package(jar):
-
-```bash
-git clone https://gitlab.com/projectn-oss/projectn-bolt-java.git
-cd projectn-bolt-java
-./gradlew uberJar
-```
-
-* The local package would be located at `build/libs/bolt-java-sdk-1.0.jar`
-
-#### Using Java SDK for Bolt
-
-* Download the source and copy the `Java SDK for Bolt` package (`bolt-java-sdk.jar`), built in the previous step,
-  into the `lib` directory.
-  
-```bash
-git clone https://gitlab.com/projectn-oss/projectn-bolt-scala-sample.git
-cd projectn-bolt-scala-sample
-mkdir lib
-
-# copy Bolt Java SDK package into the lib directory.
-
-$ ls lib
-bolt-java-sdk.jar
+libraryDependencies += "com.gitlab.projectn-oss" % "projectn-bolt-aws-java" % "1.0.0"
 ```
 
 ### Usage
 
-The Sample AWS Application in Scala illustrates the usage of `List Objects V2` operation with Bolt using 
+The Sample AWS Application in Scala illustrates the usage of `List Objects V2` operation with Bolt using
 [Java SDK for Bolt](https://gitlab.com/projectn-oss/projectn-bolt-java).
 
-Please ensure that `Bolt` is deployed and a `<bucket>` is crunched before testing the sample AWS application. 
-If you haven't deployed `Bolt`, follow the instructions given 
+Please ensure that `Bolt` is deployed and a `<bucket>` is crunched before testing the sample AWS application.
+If you haven't deployed `Bolt`, follow the instructions given
 [here](https://xyz.projectn.co/installation-guide#estimate-savings) to deploy `Bolt`.
+
+* Download the source and run the sample application using `sbt`.
+
+```bash
+git clone https://gitlab.com/projectn-oss/projectn-bolt-scala-sample.git
+cd projectn-bolt-scala-sample
+```
 
 * Set the `BOLT_URL` environment variable
   ```bash

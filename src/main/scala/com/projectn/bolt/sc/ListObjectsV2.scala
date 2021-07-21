@@ -1,6 +1,6 @@
 package com.projectn.bolt.sc
 
-import com.projectn.bolt.BoltS3Client
+import com.gitlab.projectn_oss.bolt.BoltS3Client
 import software.amazon.awssdk.services.s3.model.ListObjectsV2Request
 
 import scala.jdk.CollectionConverters._
